@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+body {
+  font-family: 'Work Sans', sans-serif;
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #000;
+}
+
+.textBox {
+  position: relative;
+}
+
+h1 {
+  color: #fff;
+  font-size: 4em;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff,
+    0 0 120px #00b3ff;
+}
+
+.lightBar {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  bottom: 0;
+  width: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff,
+    0 0 120px #00b3ff;
+  animation: lightBar 3s linear 0s infinite;
+}
+
+@keyframes lightBar {
+  0%,
+  5% {
+    transform: scale(0);
+    left: -30px;
+  }
+  10% {
+    transform: scale(1);
+    left: -30px;
+  }
+  90% {
+    transform: scale(1);
+    left: calc(100% + 20px);
+  }
+  95%,
+  100% {
+    transform: scale(0);
+    left: calc(100% + 20px);
+  }
+}
+
+.layer {
+  position: absolute;
+  top: -200px;
+  bottom: -200px;
+  left: -30px;
+  right: -30px;
+  background-color: #000;
+
+  animation: layer 6s linear 0s infinite;
+}
+
+/* @keyframes layer {
+  0%,
+  10% {
+    left: -30px;
+  }
+  90%,
+  100% {
+    left: calc(100% + 20px);
+  }
+} */
+
+@keyframes layer {
+  0%,
+  5% {
+    left: -30px;
+    right: -30px;
+  }
+  45%,
+  50% {
+    left: calc(100% + 20px);
+    right: -30px;
+  }
+  50.001%,
+  55% {
+    left: -30px;
+    right: calc(100% + 20px);
+  }
+  95%,
+  100% {
+    left: -30px;
+    right: -30px;
+  }
+}
