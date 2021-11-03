@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Work Sans', sans-serif;
 
@@ -17,17 +25,17 @@ body {
 
 h1 {
   color: #fff;
-  font-size: 4em;
-  letter-spacing: 0.1em;
+  font-size: 6em;
+  letter-spacing: 0.2em;
   text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff,
     0 0 120px #00b3ff;
 }
 
 .lightBar {
   position: absolute;
-  top: 0;
+  top: -100px;
+  bottom: -100px;
   left: -30px;
-  bottom: 0;
   width: 10px;
   border-radius: 10px;
   background-color: #fff;
@@ -68,17 +76,6 @@ h1 {
   animation: layer 6s linear 0s infinite;
 }
 
-/* @keyframes layer {
-  0%,
-  10% {
-    left: -30px;
-  }
-  90%,
-  100% {
-    left: calc(100% + 20px);
-  }
-} */
-
 @keyframes layer {
   0%,
   5% {
@@ -100,4 +97,8 @@ h1 {
     left: -30px;
     right: -30px;
   }
+}
+
+canvas {
+  background-color: #000;
 }

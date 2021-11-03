@@ -92,3 +92,5 @@ class Canvas {
     this.ctx.closePath()
   }
 }
+
+const canvas = new Canvas(window.innerWidth, window.innerHeight)
